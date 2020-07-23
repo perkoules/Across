@@ -1701,8 +1701,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09fe68a86a8e14f48a980a9c0806fcae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 1004524067}
-  speed: 6
+  characterController: {fileID: 1004524067}
+  mainCamera: {fileID: 0}
+  speed: 1
+  turnSmoothTime: 0.1
 --- !u!1 &9015853333350921845
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,13 +6,12 @@ public class TowerShoot : MonoBehaviour
 {
     private CubeSpawner cubeSpawner;
     public GameObject fire, point;
-    public float speed = 5f, repeatRate = 6f;
     private GameObject fireProjectile;
     private Vector3 towards = Vector3.zero;
     void Start()
     {
         cubeSpawner = FindObjectOfType<CubeSpawner>();
-        InvokeRepeating("Fire", 5, repeatRate);
+        InvokeRepeating("Fire", 5, Random.Range(3,6));
     }
 
     void Fire()

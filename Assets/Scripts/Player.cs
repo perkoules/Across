@@ -5,12 +5,12 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public CubeSpawner spawner;
     public Camera cam;
     public LayerMask layerMask;
     public Collider[] colliders;
     public Shader originalShader, greenShader;
-    
+
+
     private void FixedUpdate()
     {
         colliders = Physics.OverlapBox(transform.position, new Vector3(1.5f, 0.25f, 1.5f), Quaternion.identity, layerMask);        

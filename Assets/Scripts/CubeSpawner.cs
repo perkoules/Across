@@ -20,7 +20,7 @@ public class CubeSpawner : MonoBehaviour
             {
                 if (floorTiles.Count <= 100)
                 {
-                    floorTiles.Add(Instantiate(prefabfloorCube, new Vector3(0 + i * 1.5f, 10, 0 + j * 1.5f), Quaternion.Euler(90, 0, 0), floorHolder.transform));
+                    floorTiles.Add(Instantiate(prefabfloorCube, new Vector3(0 + i * 1.5f, 10, 0 + j * 1.5f), Quaternion.Euler(0, 0, 0), floorHolder.transform));
                     yield return new WaitForSeconds(spawnSpeed);
                 }
             }

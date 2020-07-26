@@ -604,6 +604,12 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 1495870647}
+    - target: {fileID: 6007891541183512029, guid: 8d0e0f84032640440a43e1b7ca72926e,
+        type: 3}
+      propertyPath: cubeTile
+      value: 
+      objectReference: {fileID: -8127205036812311635, guid: 6e6cfa17cd7546b4f9f30a186d8896ea,
+        type: 3}
     - target: {fileID: 6128546722270782771, guid: 8d0e0f84032640440a43e1b7ca72926e,
         type: 3}
       propertyPath: m_Layer

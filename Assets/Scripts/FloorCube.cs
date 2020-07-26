@@ -13,7 +13,7 @@ public class FloorCube : MonoBehaviour
 
     private void Update()
     {
-        if (!Array.Exists(GameObject.FindObjectOfType<Player>().colliders, col => col == this.GetComponent<Collider>()))
+        if (!Array.Exists(FindObjectOfType<Player>().colliders, col => col == this.GetComponent<Collider>()))
         {
             GetComponent<MeshRenderer>().material.shader = originalShader;
             canBeStepped = false;

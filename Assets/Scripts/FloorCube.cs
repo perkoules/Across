@@ -2,18 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.SceneManagement;
 
 public class FloorCube : MonoBehaviour
 {
-    //private Animation anim;
     public LayerMask layerMask;
     public Shader originalShader;
     public bool canBeStepped = false;
 
-    private void Start()
-    {
-       //anim = GetComponent<Animation>();
-    }
 
     private void Update()
     {
@@ -25,11 +21,11 @@ public class FloorCube : MonoBehaviour
         
     }
 
-    /*private void OnCollisionEnter(Collision other)
+    private void OnCollisionEnter(Collision other)
     {
-        if ((other.gameObject.name == "Lava"))
+        if (other.gameObject.CompareTag("Player") && this.gameObject.transform.parent.name.Contains("End"))
         {
-            anim.Play("Anim_FloorTile");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
-    }*/
+    }
 }

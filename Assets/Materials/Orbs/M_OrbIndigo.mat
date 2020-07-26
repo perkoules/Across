@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_Orb
+  m_Name: M_OrbIndigo
   m_Shader: {fileID: -6465566751694194690, guid: e4aa39201f55f7247b06cd45a43735e7,
     type: 3}
   m_ShaderKeywords: 
@@ -84,7 +84,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_F95F2A8: {r: 1, g: 1, b: 1, a: 0}
+    - Color_F95F2A8: {r: 0.29411766, g: 0, b: 0.50980395, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

@@ -1693,6 +1693,7 @@ MonoBehaviour:
     type: 3}
   greenShader: {fileID: -6465566751694194690, guid: 772bb697571c3784f9185caa504b63e4,
     type: 3}
+  orbText: []
 --- !u!54 &1396942844
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1707,7 +1708,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 122
   m_CollisionDetection: 0
 --- !u!136 &1396942845
 CapsuleCollider:

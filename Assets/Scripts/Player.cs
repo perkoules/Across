@@ -68,7 +68,7 @@ public class Player : MonoBehaviour
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out RaycastHit hit, 1000) && hit.transform.gameObject.CompareTag("FloorCubeTag"))
         {
-            if (Input.GetKey(KeyCode.Mouse0) && hit.collider.gameObject.GetComponent<FloorCube>().canBeStepped)
+            if (Input.GetKeyDown(KeyCode.Mouse0) && hit.collider.gameObject.GetComponent<FloorCube>().canBeStepped)
             {
                 transform.position = new Vector3(hit.transform.position.x, transform.position.y, hit.transform.position.z);
             }

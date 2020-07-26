@@ -5,11 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    
     void Start()
     {
         DontDestroyOnLoad(this.gameObject);
     }
+
     public static void SetRedText(int orbsObtained)
     {
         PlayerPrefs.SetInt("Red", orbsObtained);

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SphereDrop : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class SphereDrop : MonoBehaviour
         {
             Destroy(other.gameObject);
             Destroy(this.gameObject);
+            SceneManager.LoadScene(8);
         }
         else if (other.gameObject.CompareTag("FloorCubeTag"))
         {

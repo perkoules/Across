@@ -11,7 +11,7 @@ public class TowerShoot : MonoBehaviour
     void Start()
     {
         cubeSpawner = FindObjectOfType<CubeSpawner>();
-        InvokeRepeating("Fire", 5, Random.Range(2,4));
+        InvokeRepeating("Fire", 5, Random.Range(2.5f,4));
     }
 
     void Fire()

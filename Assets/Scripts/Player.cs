@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     public Text[] orbText;
     public int[] orbsObtained = new int[7] { 0, 0, 0, 0, 0, 0, 0 };
     private int totalOrbs = 0;
+    private AudioSource audioSource;
     private void Awake()
     {
         if (SceneManager.GetActiveScene().buildIndex == 1)
@@ -44,6 +45,7 @@ public class Player : MonoBehaviour
     }
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         if (SceneManager.GetActiveScene().buildIndex == 8)
         {
             totalOrbs = orbsObtained[0] + orbsObtained[1] + orbsObtained[2] + orbsObtained[3] + orbsObtained[4] + orbsObtained[5] + orbsObtained[6];
@@ -86,6 +88,7 @@ public class Player : MonoBehaviour
     {
         if (other.gameObject.CompareTag("OrbTag"))
         {
+            audioSource.PlayOneShot(audioSource.clip);
             if (other.gameObject.GetComponent<MeshRenderer>().material.name.Contains("Red"))
             {
                 orbsObtained[0]++;

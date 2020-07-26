@@ -5,10 +5,34 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    
+    public AudioClip[] audioclips;
+    private AudioSource audioSource;
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     void Start()
     {
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
+        ChooseMusic();
+    }
+
+    public void ChooseMusic()
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 0 || SceneManager.GetActiveScene().buildIndex == 8)
+        {
+            audioSource.clip = audioclips[0];
+            audioSource.volume = 0.15f;
+            audioSource.Play();
+        }
+        else
+        {
+            audioSource.Stop();
+            audioSource.clip = audioclips[1];
+            audioSource.volume = 1f;
+            audioSource.Play();
+        }
     }
 
     public static void SetRedText(int orbsObtained)

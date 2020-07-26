@@ -992,7 +992,7 @@ PrefabInstance:
     - target: {fileID: 5723792866030440865, guid: 8d0e0f84032640440a43e1b7ca72926e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.113
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 5723792866030440865, guid: 8d0e0f84032640440a43e1b7ca72926e,
         type: 3}
@@ -1036,26 +1036,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6007891541183512029, guid: 8d0e0f84032640440a43e1b7ca72926e,
         type: 3}
-      propertyPath: orbText.Array.size
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6007891541183512029, guid: 8d0e0f84032640440a43e1b7ca72926e,
-        type: 3}
-      propertyPath: orbClass.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6007891541183512029, guid: 8d0e0f84032640440a43e1b7ca72926e,
-        type: 3}
-      propertyPath: orbClass.Array.data[0].orbTextClass.Array.size
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6007891541183512029, guid: 8d0e0f84032640440a43e1b7ca72926e,
-        type: 3}
-      propertyPath: orbClass.Array.data[0].orbsIntClass.Array.size
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6007891541183512029, guid: 8d0e0f84032640440a43e1b7ca72926e,
-        type: 3}
       propertyPath: cam
       value: 
       objectReference: {fileID: 1495870647}
@@ -1094,12 +1074,6 @@ PrefabInstance:
       propertyPath: orbText.Array.data[6]
       value: 
       objectReference: {fileID: 1026146141}
-    - target: {fileID: 6007891541183512029, guid: 8d0e0f84032640440a43e1b7ca72926e,
-        type: 3}
-      propertyPath: orb
-      value: 
-      objectReference: {fileID: 3971421783338813595, guid: faf1bba3b0b7b9a48b4be35046dd81ba,
-        type: 3}
     - target: {fileID: 8734070197482038194, guid: 8d0e0f84032640440a43e1b7ca72926e,
         type: 3}
       propertyPath: m_Name
@@ -2947,6 +2921,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: StartPoint
+      objectReference: {fileID: 0}
+    - target: {fileID: 880745792759758929, guid: 0276a41bdae857c438160b2ea2f850d7,
+        type: 3}
+      propertyPath: m_TagString
+      value: FloorCubeTag
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0276a41bdae857c438160b2ea2f850d7, type: 3}

@@ -1689,11 +1689,20 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   colliders: []
+  orb: {fileID: 3971421783338813595, guid: faf1bba3b0b7b9a48b4be35046dd81ba, type: 3}
   originalShader: {fileID: -6465566751694194690, guid: 212deb89925db5545843bbe82379afb3,
     type: 3}
   greenShader: {fileID: -6465566751694194690, guid: 772bb697571c3784f9185caa504b63e4,
     type: 3}
-  orbText: []
+  orbText:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  orbsObtained: 00000000000000000000000000000000000000000000000000000000
 --- !u!54 &1396942844
 Rigidbody:
   m_ObjectHideFlags: 0

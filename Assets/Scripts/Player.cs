@@ -59,11 +59,19 @@ public class Player : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        colliders = Physics.OverlapBox(transform.position, new Vector3(1.5f, 0.25f, 1.5f), Quaternion.identity, layerMask);        
+        colliders = Physics.OverlapBox(transform.position, new Vector3(1.5f, 0.25f, 1.5f), Quaternion.identity, layerMask);
         foreach (var col in colliders)
         {
-            col.GetComponent<MeshRenderer>().material.shader = greenShader;
-            col.gameObject.GetComponent<FloorCube>().canBeStepped = true;
+            if (!col.gameObject.transform.parent.gameObject.name.Contains("Start"))
+            {
+                col.GetComponent<MeshRenderer>().material.shader = greenShader;
+                col.gameObject.GetComponent<FloorCube>().canBeStepped = true;
+            }
+            else
+            {
+                col.GetComponent<MeshRenderer>().material.shader = originalShader;
+                col.gameObject.GetComponent<FloorCube>().canBeStepped = false;
+            }
         }
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out RaycastHit hit, 1000) && hit.transform.gameObject.CompareTag("FloorCubeTag"))

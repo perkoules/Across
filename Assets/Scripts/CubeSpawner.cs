@@ -8,6 +8,7 @@ public class CubeSpawner : MonoBehaviour
     public GameObject floorHolder;
     public GameObject prefabfloorCube;
     public List<GameObject> floorTiles;
+
     void Start()
     {
         StartCoroutine(SpawnTiles());
@@ -26,4 +27,6 @@ public class CubeSpawner : MonoBehaviour
             }
         }        
     }
+
+
 }

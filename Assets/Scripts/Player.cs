@@ -10,7 +10,6 @@ public class Player : MonoBehaviour
     public Collider[] colliders;
     public Shader originalShader, greenShader;
 
-
     private void FixedUpdate()
     {
         colliders = Physics.OverlapBox(transform.position, new Vector3(1.5f, 0.25f, 1.5f), Quaternion.identity, layerMask);        
@@ -28,12 +27,12 @@ public class Player : MonoBehaviour
             }
         }
     }
-
-    void OnDrawGizmos()
+    private void OnCollisionEnter(Collision other)
     {
-        Gizmos.color = Color.red;
-
-        //Draw a cube where the OverlapBox is (positioned where your GameObject is as well as a size)
-        Gizmos.DrawWireCube(transform.position, new Vector3(3, 0.5f, 3));
+        if (other.gameObject.CompareTag("OrbTag"))
+        {
+            Destroy(other.gameObject);
+            print("Orb Obtained");
+        }
     }
 }

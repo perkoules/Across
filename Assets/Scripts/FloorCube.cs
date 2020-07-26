@@ -5,14 +5,14 @@ using System;
 
 public class FloorCube : MonoBehaviour
 {
-    private Animation anim;
+    //private Animation anim;
     public LayerMask layerMask;
     public Shader originalShader;
     public bool canBeStepped = false;
 
     private void Start()
     {
-        anim = GetComponent<Animation>();
+       //anim = GetComponent<Animation>();
     }
 
     private void Update()
@@ -25,11 +25,11 @@ public class FloorCube : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision other)
+    /*private void OnCollisionEnter(Collision other)
     {
         if ((other.gameObject.name == "Lava"))
         {
-            anim.Play("Anim_FloorTile", PlayMode.StopAll);
+            anim.Play("Anim_FloorTile");
         }
-    }
+    }*/
 }

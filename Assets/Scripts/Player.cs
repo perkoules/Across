@@ -13,10 +13,15 @@ public class Player : MonoBehaviour
     public GameObject orb;
     public Shader originalShader, greenShader;
     public Text[] orbText;
-    public int[] orbsObtained = new int[7] { 0, 0, 0, 0, 0, 0, 0 };
+    private int[] orbsObtained = new int[7] { 0, 0, 0, 0, 0, 0, 0 };
     private int totalOrbs = 0;
     private AudioSource audioSource;
     private void Awake()
+    {
+        InitializeCollectedOrbs();
+    }
+
+    private void InitializeCollectedOrbs()
     {
         if (SceneManager.GetActiveScene().buildIndex == 1)
         {
@@ -26,7 +31,7 @@ public class Player : MonoBehaviour
             PlayerPrefs.SetInt("Green", 0);
             PlayerPrefs.SetInt("Blue", 0);
             PlayerPrefs.SetInt("Indigo", 0);
-            PlayerPrefs.SetInt("Violet", 0); 
+            PlayerPrefs.SetInt("Violet", 0);
         }
         orbsObtained[0] = PlayerPrefs.GetInt("Red");
         orbsObtained[1] = PlayerPrefs.GetInt("Orange");
@@ -35,14 +40,15 @@ public class Player : MonoBehaviour
         orbsObtained[4] = PlayerPrefs.GetInt("Blue");
         orbsObtained[5] = PlayerPrefs.GetInt("Indigo");
         orbsObtained[6] = PlayerPrefs.GetInt("Violet");
-        orbText[0].text = PlayerPrefs.GetInt("Red").ToString();
-        orbText[1].text = PlayerPrefs.GetInt("Orange").ToString();
-        orbText[2].text = PlayerPrefs.GetInt("Yellow").ToString();
-        orbText[3].text = PlayerPrefs.GetInt("Green").ToString();
-        orbText[4].text = PlayerPrefs.GetInt("Blue").ToString();
-        orbText[5].text = PlayerPrefs.GetInt("Indigo").ToString();
-        orbText[6].text = PlayerPrefs.GetInt("Violet").ToString();
+        orbText[0].text = orbsObtained[0].ToString();
+        orbText[1].text = orbsObtained[1].ToString();
+        orbText[2].text = orbsObtained[2].ToString();
+        orbText[3].text = orbsObtained[3].ToString();
+        orbText[4].text = orbsObtained[4].ToString();
+        orbText[5].text = orbsObtained[5].ToString();
+        orbText[6].text = orbsObtained[6].ToString();
     }
+
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();

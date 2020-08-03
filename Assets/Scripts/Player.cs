@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     private int[] orbsObtained = new int[7] { 0, 0, 0, 0, 0, 0, 0 };
     private int totalOrbs = 0;
     private AudioSource audioSource;
+
     private void Awake()
     {
         InitializeCollectedOrbs();
@@ -23,7 +24,7 @@ public class Player : MonoBehaviour
 
     private void InitializeCollectedOrbs()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 1)
+        if (SceneManager.GetActiveScene().buildIndex == 0)
         {
             PlayerPrefs.SetInt("Red", 0);
             PlayerPrefs.SetInt("Orange", 0);
@@ -82,7 +83,7 @@ public class Player : MonoBehaviour
             }
         }
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out RaycastHit hit, 1000) && hit.transform.gameObject.CompareTag("FloorCubeTag"))
+        if (Physics.Raycast(ray, out RaycastHit hit, 5000) && hit.transform.gameObject.CompareTag("FloorCubeTag"))
         {
             if (Input.GetKeyDown(KeyCode.Mouse0) && hit.collider.gameObject.GetComponent<FloorCube>().canBeStepped)
             {
@@ -95,6 +96,7 @@ public class Player : MonoBehaviour
         if (other.gameObject.CompareTag("OrbTag"))
         {
             audioSource.PlayOneShot(audioSource.clip);
+
             if (other.gameObject.GetComponent<MeshRenderer>().material.name.Contains("Red"))
             {
                 orbsObtained[0]++;

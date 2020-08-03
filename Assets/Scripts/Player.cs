@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
 
     private void InitializeCollectedOrbs()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 0)
+        if (SceneManager.GetActiveScene().buildIndex == 1)
         {
             PlayerPrefs.SetInt("Red", 0);
             PlayerPrefs.SetInt("Orange", 0);
@@ -85,7 +85,7 @@ public class Player : MonoBehaviour
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out RaycastHit hit, 5000) && hit.transform.gameObject.CompareTag("FloorCubeTag"))
         {
-            if (Input.GetKeyDown(KeyCode.Mouse0) && hit.collider.gameObject.GetComponent<FloorCube>().canBeStepped)
+            if (Input.GetKey(KeyCode.Mouse0) && hit.collider.gameObject.GetComponent<FloorCube>().canBeStepped)
             {
                 transform.position = new Vector3(hit.transform.position.x, transform.position.y, hit.transform.position.z);
             }

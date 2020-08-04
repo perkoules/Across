@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TowerShoot : MonoBehaviour
 {
@@ -10,8 +11,11 @@ public class TowerShoot : MonoBehaviour
     private Vector3 towards = Vector3.zero;
     void Start()
     {
-        cubeSpawner = FindObjectOfType<CubeSpawner>();
-        InvokeRepeating("Fire", 5, Random.Range(2.5f,4));
+        if (SceneManager.GetActiveScene().buildIndex > 0 && SceneManager.GetActiveScene().buildIndex < 8)
+        {
+            cubeSpawner = FindObjectOfType<CubeSpawner>();
+            InvokeRepeating("Fire", 5, Random.Range(2.5f, 4));
+        }        
     }
 
     void Fire()

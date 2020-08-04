@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
 
     private void InitializeCollectedOrbs()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 0)
+        if (SceneManager.GetActiveScene().buildIndex == 1)
         {
             PlayerPrefs.SetInt("Red", 0);
             PlayerPrefs.SetInt("Orange", 0);

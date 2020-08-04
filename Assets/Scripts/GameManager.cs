@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,7 +15,36 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
+        InitializeCollectedOrbs();
+        FinalSceneText();
         ChooseMusic();
+    }
+    private void InitializeCollectedOrbs()
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            PlayerPrefs.SetInt("Red", 0);
+            PlayerPrefs.SetInt("Orange", 0);
+            PlayerPrefs.SetInt("Yellow", 0);
+            PlayerPrefs.SetInt("Green", 0);
+            PlayerPrefs.SetInt("Blue", 0);
+            PlayerPrefs.SetInt("Indigo", 0);
+            PlayerPrefs.SetInt("Violet", 0);
+        }
+    }
+    private static void FinalSceneText()
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 8)
+        {
+            if (TotalOrbs() == 70)
+            {
+                GameObject.FindGameObjectWithTag("EndTextTag").GetComponent<Text>().text = $"You Won! Orbs Collected: {TotalOrbs()}/70";
+            }
+            else
+            {
+                GameObject.FindGameObjectWithTag("EndTextTag").GetComponent<Text>().text = $"You Lost! Orbs Collected: {TotalOrbs()}/70";
+            }
+        }
     }
 
     public void ChooseMusic()
@@ -91,7 +121,14 @@ public class GameManager : MonoBehaviour
     {
         return PlayerPrefs.GetInt("Violet");
     }
-       
+    
+    private static int TotalOrbs()
+    {
+        return PlayerPrefs.GetInt("Red") + PlayerPrefs.GetInt("Yellow") + 
+            PlayerPrefs.GetInt("Orange") + PlayerPrefs.GetInt("Green") + PlayerPrefs.GetInt("Blue")+
+            PlayerPrefs.GetInt("Indigo") + PlayerPrefs.GetInt("Violet");
+    }
+
     public void GoToMainMenu()
     {
         SceneManager.LoadScene(0);

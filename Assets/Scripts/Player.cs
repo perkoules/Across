@@ -7,18 +7,18 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    public Camera cam;
     public LayerMask layerMask;
     public Collider[] colliders;
     public GameObject orb;
     public Shader originalShader, greenShader;
-    public Text[] orbText;
+    private Camera cam;
     private int[] orbsObtained = new int[7] { 0, 0, 0, 0, 0, 0, 0 };
     private int totalOrbs = 0;
     private AudioSource audioSource;
 
     private void Awake()
     {
+        cam = FindObjectOfType<Camera>();
         InitializeCollectedOrbs();
     }
 
@@ -34,20 +34,6 @@ public class Player : MonoBehaviour
             PlayerPrefs.SetInt("Indigo", 0);
             PlayerPrefs.SetInt("Violet", 0);
         }
-        orbsObtained[0] = PlayerPrefs.GetInt("Red");
-        orbsObtained[1] = PlayerPrefs.GetInt("Orange");
-        orbsObtained[2] = PlayerPrefs.GetInt("Yellow");
-        orbsObtained[3] = PlayerPrefs.GetInt("Green");
-        orbsObtained[4] = PlayerPrefs.GetInt("Blue");
-        orbsObtained[5] = PlayerPrefs.GetInt("Indigo");
-        orbsObtained[6] = PlayerPrefs.GetInt("Violet");
-        orbText[0].text = orbsObtained[0].ToString();
-        orbText[1].text = orbsObtained[1].ToString();
-        orbText[2].text = orbsObtained[2].ToString();
-        orbText[3].text = orbsObtained[3].ToString();
-        orbText[4].text = orbsObtained[4].ToString();
-        orbText[5].text = orbsObtained[5].ToString();
-        orbText[6].text = orbsObtained[6].ToString();
     }
 
     private void Start()
@@ -85,7 +71,7 @@ public class Player : MonoBehaviour
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out RaycastHit hit, 5000) && hit.transform.gameObject.CompareTag("FloorCubeTag"))
         {
-            if (Input.GetKeyDown(KeyCode.Mouse0) && hit.collider.gameObject.GetComponent<FloorCube>().canBeStepped)
+            if (Input.GetKey(KeyCode.Mouse0) && hit.collider.gameObject.GetComponent<FloorCube>().canBeStepped)
             {
                 transform.position = new Vector3(hit.transform.position.x, transform.position.y, hit.transform.position.z);
             }
@@ -95,57 +81,7 @@ public class Player : MonoBehaviour
     {
         if (other.gameObject.CompareTag("OrbTag"))
         {
-            audioSource.PlayOneShot(audioSource.clip);
-
-            if (other.gameObject.GetComponent<MeshRenderer>().material.name.Contains("Red"))
-            {
-                orbsObtained[0]++;
-                PlayerPrefs.SetInt("Red", orbsObtained[0]);
-                orbText[0].text = orbsObtained[0].ToString();
-                Destroy(other.gameObject);
-            }
-            else if (other.gameObject.GetComponent<MeshRenderer>().material.name.Contains("Orange"))
-            {
-                orbsObtained[1]++;
-                PlayerPrefs.SetInt("Orange", orbsObtained[1]);
-                orbText[1].text = orbsObtained[1].ToString();
-                Destroy(other.gameObject);
-            }
-            else if (other.gameObject.GetComponent<MeshRenderer>().material.name.Contains("Yellow"))
-            {
-                orbsObtained[2]++;
-                PlayerPrefs.SetInt("Yellow", orbsObtained[2]);
-                orbText[2].text = orbsObtained[2].ToString();
-                Destroy(other.gameObject);
-            }
-            else if (other.gameObject.GetComponent<MeshRenderer>().material.name.Contains("Green"))
-            {
-                orbsObtained[3]++;
-                PlayerPrefs.SetInt("Green", orbsObtained[3]);
-                orbText[3].text = orbsObtained[3].ToString();
-                Destroy(other.gameObject);
-            }
-            else if (other.gameObject.GetComponent<MeshRenderer>().material.name.Contains("Blue"))
-            {
-                orbsObtained[4]++;
-                PlayerPrefs.SetInt("Blue", orbsObtained[4]);
-                orbText[4].text = orbsObtained[4].ToString();
-                Destroy(other.gameObject);
-            }
-            else if (other.gameObject.GetComponent<MeshRenderer>().material.name.Contains("Indigo"))
-            {
-                orbsObtained[5]++;
-                PlayerPrefs.SetInt("Indigo", orbsObtained[5]);
-                orbText[5].text = orbsObtained[5].ToString();
-                Destroy(other.gameObject);
-            }
-            else if (other.gameObject.GetComponent<MeshRenderer>().material.name.Contains("Violet"))
-            {
-                orbsObtained[6]++;
-                PlayerPrefs.SetInt("Violet", orbsObtained[6]);
-                orbText[6].text = orbsObtained[6].ToString();
-                Destroy(other.gameObject);
-            }
+            audioSource.PlayOneShot(audioSource.clip);            
         }
     }
 }

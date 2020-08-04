@@ -8,6 +8,13 @@ TagManager:
   - FxTemporaire
   - OrbTag
   - EndTextTag
+  - RedTextTag
+  - OrangeTextTag
+  - YellowTextTag
+  - GreenTextTag
+  - BlueTextTag
+  - IndigoTextTag
+  - VioletTextTag
   layers:
   - Default
   - TransparentFX

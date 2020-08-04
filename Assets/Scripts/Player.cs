@@ -12,45 +12,16 @@ public class Player : MonoBehaviour
     public GameObject orb;
     public Shader originalShader, greenShader;
     private Camera cam;
-    private int[] orbsObtained = new int[7] { 0, 0, 0, 0, 0, 0, 0 };
-    private int totalOrbs = 0;
     private AudioSource audioSource;
 
     private void Awake()
     {
         cam = FindObjectOfType<Camera>();
-        InitializeCollectedOrbs();
     }
-
-    private void InitializeCollectedOrbs()
-    {
-        if (SceneManager.GetActiveScene().buildIndex == 1)
-        {
-            PlayerPrefs.SetInt("Red", 0);
-            PlayerPrefs.SetInt("Orange", 0);
-            PlayerPrefs.SetInt("Yellow", 0);
-            PlayerPrefs.SetInt("Green", 0);
-            PlayerPrefs.SetInt("Blue", 0);
-            PlayerPrefs.SetInt("Indigo", 0);
-            PlayerPrefs.SetInt("Violet", 0);
-        }
-    }
-
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        if (SceneManager.GetActiveScene().buildIndex == 8)
-        {
-            totalOrbs = orbsObtained[0] + orbsObtained[1] + orbsObtained[2] + orbsObtained[3] + orbsObtained[4] + orbsObtained[5] + orbsObtained[6];
-            if (totalOrbs == 70)
-            {
-                GameObject.FindGameObjectWithTag("EndTextTag").GetComponent<Text>().text = $"You Won! Orbs Collected: {totalOrbs}/70";
-            }
-            else
-            {
-                GameObject.FindGameObjectWithTag("EndTextTag").GetComponent<Text>().text = $"You Lost! Orbs Collected: {totalOrbs}/70";
-            } 
-        }
+        
     }
     private void FixedUpdate()
     {

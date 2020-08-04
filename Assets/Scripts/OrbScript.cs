@@ -14,7 +14,6 @@ public class OrbScript : MonoBehaviour
         materialName = GetComponent<MeshRenderer>().material.name.Substring(5);
         materialName = materialName.Replace(" (Instance)", "");
         orbText = GameObject.FindGameObjectWithTag($"{materialName}TextTag").GetComponent<Text>();
-        
     }
 
     private void OnCollisionEnter(Collision other)
@@ -23,7 +22,6 @@ public class OrbScript : MonoBehaviour
         {
             collectedOrbs = PlayerPrefs.GetInt($"{materialName}") + 1;
             PlayerPrefs.SetInt($"{materialName}", collectedOrbs);
-            print(collectedOrbs);
             orbText.text = PlayerPrefs.GetInt($"{materialName}").ToString();
             Destroy(this.gameObject);
         }

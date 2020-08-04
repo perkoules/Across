@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1196762512326591334}
   - component: {fileID: 1196762512326591328}
   - component: {fileID: 1196762512326591329}
+  - component: {fileID: 6478909620712782078}
   m_Layer: 5
   m_Name: YellowText
   m_TagString: YellowTextTag
@@ -80,6 +81,18 @@ MonoBehaviour:
   m_Text: '0
 
 '
+--- !u!114 &6478909620712782078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196762512326591335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fab1fea0004ebea4e93ab4093d80aab4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1196762512561405074
 GameObject:
   m_ObjectHideFlags: 0
@@ -166,6 +179,7 @@ GameObject:
   - component: {fileID: 1196762512615493511}
   - component: {fileID: 1196762512615493505}
   - component: {fileID: 1196762512615493510}
+  - component: {fileID: 5299950872842816164}
   m_Layer: 5
   m_Name: IndigoText
   m_TagString: IndigoTextTag
@@ -235,6 +249,18 @@ MonoBehaviour:
   m_Text: '0
 
 '
+--- !u!114 &5299950872842816164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196762512615493508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fab1fea0004ebea4e93ab4093d80aab4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1196762512784583189
 GameObject:
   m_ObjectHideFlags: 0
@@ -321,6 +347,7 @@ GameObject:
   - component: {fileID: 1196762512883311385}
   - component: {fileID: 1196762512883311387}
   - component: {fileID: 1196762512883311384}
+  - component: {fileID: 5533741789982710363}
   m_Layer: 5
   m_Name: VioletText
   m_TagString: VioletTextTag
@@ -390,6 +417,18 @@ MonoBehaviour:
   m_Text: '0
 
 '
+--- !u!114 &5533741789982710363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196762512883311390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fab1fea0004ebea4e93ab4093d80aab4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1196762512961193827
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,6 +440,7 @@ GameObject:
   - component: {fileID: 1196762512961193826}
   - component: {fileID: 1196762512961193836}
   - component: {fileID: 1196762512961193837}
+  - component: {fileID: 6441105656667509101}
   m_Layer: 5
   m_Name: BlueText
   m_TagString: BlueTextTag
@@ -470,6 +510,18 @@ MonoBehaviour:
   m_Text: '0
 
 '
+--- !u!114 &6441105656667509101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196762512961193827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fab1fea0004ebea4e93ab4093d80aab4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1196762513044664510
 GameObject:
   m_ObjectHideFlags: 0
@@ -481,6 +533,7 @@ GameObject:
   - component: {fileID: 1196762513044664505}
   - component: {fileID: 1196762513044664507}
   - component: {fileID: 1196762513044664504}
+  - component: {fileID: 1946365055454596692}
   m_Layer: 5
   m_Name: RedText
   m_TagString: RedTextTag
@@ -550,6 +603,18 @@ MonoBehaviour:
   m_Text: '0
 
 '
+--- !u!114 &1946365055454596692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196762513044664510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fab1fea0004ebea4e93ab4093d80aab4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1196762513112370926
 GameObject:
   m_ObjectHideFlags: 0
@@ -936,6 +1001,7 @@ GameObject:
   - component: {fileID: 1196762513665420584}
   - component: {fileID: 1196762513665420586}
   - component: {fileID: 1196762513665420587}
+  - component: {fileID: 4624253315358845089}
   m_Layer: 5
   m_Name: OrangeText
   m_TagString: OrangeTextTag
@@ -1005,6 +1071,18 @@ MonoBehaviour:
   m_Text: '0
 
 '
+--- !u!114 &4624253315358845089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196762513665420585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fab1fea0004ebea4e93ab4093d80aab4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1196762513841348831
 GameObject:
   m_ObjectHideFlags: 0
@@ -1016,6 +1094,7 @@ GameObject:
   - component: {fileID: 1196762513841348830}
   - component: {fileID: 1196762513841348824}
   - component: {fileID: 1196762513841348825}
+  - component: {fileID: 1140681665152111957}
   m_Layer: 5
   m_Name: GreenText
   m_TagString: GreenTextTag
@@ -1085,6 +1164,18 @@ MonoBehaviour:
   m_Text: '0
 
 '
+--- !u!114 &1140681665152111957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196762513841348831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fab1fea0004ebea4e93ab4093d80aab4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1196762514271695092
 GameObject:
   m_ObjectHideFlags: 0

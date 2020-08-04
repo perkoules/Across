@@ -350,7 +350,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &659008765 stripped
 MonoBehaviour:
@@ -1083,7 +1083,7 @@ PrefabInstance:
     - target: {fileID: 1196762514271695088, guid: 4790e69ce3bb48449ab138f1e12af0c5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 1196762514271695088, guid: 4790e69ce3bb48449ab138f1e12af0c5,
         type: 3}
@@ -1264,7 +1264,7 @@ PrefabInstance:
     - target: {fileID: 6820311792707893360, guid: c115389d285486a4daab832a1af9d156,
         type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 6820311792707893360, guid: c115389d285486a4daab832a1af9d156,
         type: 3}
@@ -1545,7 +1545,7 @@ PrefabInstance:
     - target: {fileID: 543721283903589573, guid: 590ab9f1f8012344eba0df14a731481f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 543721283903589573, guid: 590ab9f1f8012344eba0df14a731481f,
         type: 3}
